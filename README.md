@@ -1,2 +1,3 @@
-# comp2245-project1
-Uhhhhh...... for my comp2245-project1 I guess
+# COMP2245 Project 1
+
+This is Project 1 for <Jaheim Dazzell>
