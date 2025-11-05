@@ -44,7 +44,6 @@ header a:hover {
   color: #5A67D8;
 }
 
-
 .overview-hero {
   background-color: #E2E8F0;
   padding: 3rem 0;
@@ -52,28 +51,33 @@ header a:hover {
 
 .overview-hero .container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.overview-hero-image, .overview-hero-text {
+  flex: 1;
 }
 
 .overview-hero-image img {
-  max-width: 100%;
+  width: 70%;
+  height: auto;
   border-radius: 10px;
+  display: block;
 }
 
 .overview-hero-text h2 {
   font-size: 28px;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .overview-hero-text p {
   font-size: 16px;
   color: #333;
 }
-
-
-
 
 .learn-about {
   padding: 3rem 0;
@@ -120,7 +124,6 @@ header a:hover {
   color: #555;
 }
 
-/* ===== COVID-19 Testing Section ===== */
 .testing {
   background-color: #4A5568;
   color: white;
@@ -148,7 +151,6 @@ header a:hover {
   font-weight: bold;
 }
 
-
 .stories {
   padding: 3rem 0;
 }
@@ -161,28 +163,45 @@ header a:hover {
 
 .stories article {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .stories img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
+  background-color: #E2E8F0;
 }
 
-.stories h3 {
+.article-body {
+  flex: 1;
+}
+
+.article-body h3 {
   font-size: 18px;
   margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.stories a {
+.article-body p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.article-body a {
   color: #5A67D8;
   text-decoration: none;
   font-weight: bold;
+}
+
+.article-body a:hover {
+  text-decoration: underline;
 }
 
 .newsletter {
@@ -224,4 +243,27 @@ footer {
   text-align: center;
   padding: 1rem 0;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .overview-hero .container,
+  .testing .container,
+  .stories article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .overview-hero-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .stories img {
+    margin: 0 auto 1rem;
+  }
+
+  .newsletter .form-group {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
 }
